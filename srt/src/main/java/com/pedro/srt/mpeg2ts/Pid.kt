@@ -23,7 +23,7 @@ package com.pedro.srt.mpeg2ts
  */
 object Pid {
 
-  const val MIN_VALUE = 32
+  const val MIN_VALUE = 256
   const val MAX_VALUE = 8186
   private var lastValue: Short = MIN_VALUE.toShort()
 

@@ -70,8 +70,8 @@ class SrtSender(
   private fun setTrackConfig(videoEnabled: Boolean, audioEnabled: Boolean) {
     Pid.reset()
     service.clearTracks()
-    if (audioEnabled) service.addTrack(commandsManager.audioCodec.toCodec())
     if (videoEnabled) service.addTrack(commandsManager.videoCodec.toCodec())
+    if (audioEnabled) service.addTrack(commandsManager.audioCodec.toCodec())
     service.generatePmt()
     psiManager.updateService(service)
   }
